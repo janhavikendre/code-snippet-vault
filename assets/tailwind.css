@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Custom UI Tweaks Below --- */
+
+/* Example: Smooth scrollbar styling for code blocks */
+::-webkit-scrollbar {
+  height: 5px;
+  background: #e5e7eb;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+
+/* Example: Custom component class for a soft card shadow */
+.card-soft {
+  @apply shadow-md rounded bg-white;
+}
+
+/* Example: Extra button classes if needed */
+.btn-ghost {
+  @apply text-indigo-600 bg-transparent hover:bg-indigo-50 px-3 py-2 rounded transition;
+}

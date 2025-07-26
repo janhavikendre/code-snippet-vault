@@ -1,0 +1,35 @@
+[package]
+name = "code-snippet-vault"
+version = "0.1.0"
+authors = ["janhavikendre <janhavikendre717@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+dioxus = { version = "0.6", features = ["web", "mobile"] }
+serde = { version = "1.0", features = ["derive"] }
+js-sys = "0.3"
+web-sys = { version = "0.3", features = [
+    "Window", 
+    "Navigator", 
+    "console",
+    "Clipboard",
+    "Document",
+    "Element",
+    "HtmlElement"
+] }
+
+[profile.release]
+opt-level = "z"
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"
+
+
+
